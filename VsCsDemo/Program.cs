@@ -11,15 +11,8 @@ namespace VsCsDemo
         static void Main(string[] args)
         {
             var borrower = new Borrower { FirstName = "Tony" };
-
-            if (borrower != null && borrower.SubjectProperty != null && borrower.SubjectProperty.AddressLine1 != null)
-            {
-                Console.WriteLine(borrower.SubjectProperty.AddressLine1);
-            }
-            else
-            {
-                Console.WriteLine("TBD");
-            }
+            
+            Console.WriteLine(borrower.SubjectProperty?.AddressLine1 ?? "TBD");
 
             Console.ReadKey(true);
         }
