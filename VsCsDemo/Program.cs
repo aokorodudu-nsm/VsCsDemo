@@ -17,7 +17,7 @@ namespace VsCsDemo
             var location = "Conference Room";
 
             // Tony Okorodudu is standing in the Conference Room on 
-            var message = string.Format("{0} {1} is {2} in the {3} on {4:MMM d, yyyy}", firstName, lastName, action, location, day);
+            var message = $"{firstName} {lastName} is {action} in the {location} on {day:MMM d, yyyy}";
 
             Console.WriteLine(message);
 
