@@ -25,8 +25,7 @@ namespace VsCsDemo
                 }
                 finally
                 {
-                    // Not possible prior to C# 6
-                    // await Logger.WriteAsync("All done");
+                    await Logger.WriteAsync("All done");
                 }
             }
         }
