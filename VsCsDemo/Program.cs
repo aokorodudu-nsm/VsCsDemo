@@ -11,13 +11,9 @@ namespace VsCsDemo
             {
                 // Do some database activity....
             }
-            catch (SqlException ex)
+            catch (SqlException ex) when (ex.ErrorCode == SqlExceptions.Timeout)
             {
-                if (ex.ErrorCode == SqlExceptions.Timeout)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
+                Console.WriteLine(ex.Message);
                 throw;
             }
         }
