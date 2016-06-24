@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json.Linq;
+using System;
 
 namespace VsCsDemo
 {
@@ -10,6 +7,13 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
+            var person = new JObject();
+            person["FirstName"] = "Tony";
+            person["LastName"] = "Okorodudu";
+
+            Console.WriteLine(person);
+
+            Console.ReadKey(true);
         }
     }
 }
