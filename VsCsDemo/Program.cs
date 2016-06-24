@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Linq;
+using static System.Linq.Enumerable;
+using static System.Environment;
 
 namespace VsCsDemo
 {
@@ -7,11 +8,16 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
-            var numbers = Enumerable.Range(0, 100);
+            var numbers = Range(0, 100);
+
+            /*
+               // This is invalid
+               Where(number => number % 5 == 0);
+            */
 
             var divisibleBy5 = numbers.Where(number => number % 5 == 0);
 
-            Console.WriteLine(string.Join(Environment.NewLine, divisibleBy5));
+            Console.WriteLine(string.Join(NewLine, divisibleBy5));
 
             Console.ReadKey(true);
         }
