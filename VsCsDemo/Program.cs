@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace VsCsDemo
 {
@@ -10,6 +7,25 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
+            try
+            {
+                // Do some database activity....
+            }
+            catch (SqlException ex)
+            {
+                if (ex.ErrorCode == SqlExceptions.Timeout)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                throw;
+            }
         }
+    }
+
+
+    class SqlExceptions
+    {
+        public const int Timeout = -2;
     }
 }
