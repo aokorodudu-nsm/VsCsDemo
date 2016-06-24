@@ -15,16 +15,13 @@ namespace VsCsDemo
 
     class Person
     {
-        private readonly int _id;
-
         public Person(int id)
         {
-            _id = id;
-            FirstName = "Tony";
+            Id = id;
         }
 
-        public int Id { get { return _id; } }
+        public int Id { get; }
 
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = "Tony";
     }
 }
