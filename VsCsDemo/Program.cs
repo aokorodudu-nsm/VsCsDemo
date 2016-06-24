@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
+using static System.ConsoleColor;
+using static System.DayOfWeek;
 
 namespace VsCsDemo
 {
@@ -10,12 +13,12 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Magenta;
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            BackgroundColor = Magenta;
+            ForegroundColor = Yellow;
 
-            Console.WriteLine($"Awesome color selection!!!  Thank goodness today is {DayOfWeek.Friday}.");
+            WriteLine($"Awesome color selection!!!  Thank goodness today is {Friday}.");
 
-            Console.ReadKey(true);
+            ReadKey(true);
         }
     }
 }
