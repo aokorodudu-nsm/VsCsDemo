@@ -7,9 +7,11 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
-            var person = new JObject();
-            person["FirstName"] = "Tony";
-            person["LastName"] = "Okorodudu";
+            var person = new JObject
+            {
+                ["FirstName"] = "Tony",
+                ["LastName"] = "Okorodudu"
+            };
 
             Console.WriteLine(person);
 
