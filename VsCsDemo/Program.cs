@@ -6,11 +6,11 @@ namespace VsCsDemo
     {
         static void Main(string[] args)
         {
-            if (args.Length > 0) throw new ArgumentException("I don't want any arguments!", "args");
+            if (args.Length > 0) throw new ArgumentException("I don't want any arguments!", nameof(args));
 
-            Console.WriteLine("Class name: Program");
-            Console.WriteLine("Method name: Main");
-            Console.WriteLine("Parameter name: args");
+            Console.WriteLine($"Class name: {nameof(Program)}");
+            Console.WriteLine($"Method name: {nameof(Main)}");
+            Console.WriteLine($"Parameter name: {nameof(args)}");
 
             Console.ReadKey(true);
         }
